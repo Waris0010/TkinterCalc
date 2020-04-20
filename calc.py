@@ -64,7 +64,7 @@ def rooot():
 	operationmem = '√'
 	memory[0] = (display['text'])
 	# display['text'] = str(sqrt(int(memory[0])))
-	x = sqrt(int(memory[0]))
+	x = sqrt(float(memory[0]))
 	if x == int(x):
 		display['text'] = str(int(x))
 
