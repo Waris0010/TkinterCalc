@@ -71,6 +71,9 @@ def rooot():
 	else:
 		display['text'] = str(x)
 
+def point():
+	display['text'] += '.'
+
 def equals():
 	if operationmem == '+':
 		display['text'] = str(int(float(memory[0])+float(display['text'])))
@@ -91,12 +94,13 @@ def equals():
 
 #Operational Buttons Defined
 buttton_add = Button(root, text='+', width=button_width, height=button_height, pady=5, command=add)
-button_substract = Button(root, text='-', width=button_width, height=button_height, pady=5, command=substract)
+button_substract = Button(root, text='_', width=button_width, height=button_height, pady=5, command=substract)
 button_multiply = Button(root, text='*', width=button_width, height=button_height, pady=5, command=multiply)
 button_divide = Button(root, text='/', width=button_width, height=button_height, pady=5, command=divide)
 button_sqrt = Button(root, text='√', width=button_width, height=button_height, pady=5, command=rooot)
-button_equal = Button(root, text='=', width = button_width, height=button_height-1, pady=5, command=equals)
-clr = Button(root, text='CLR',height=2, width=22, padx=12, pady=5, command=clear).grid(row=6, column=0, columnspan=2)
+button_equal = Button(root, text='=', width = button_width, height=button_height, pady=5, command=equals)
+clr = Button(root, text='CLR',height=button_height, width=button_width, pady=5, command=clear).grid(row=6, column=0)
+button_decimal = Button(root, text='.', width=button_width, height=button_height, pady=5, command=point) # ADD COMMAND ARG
 
 
 #Packing the Buttons
@@ -120,6 +124,7 @@ button_multiply.grid(row=4, column=0, sticky='w')
 button_divide.grid(row=5, column=0, sticky='w')
 button_sqrt.grid(row=5, column=1)
 button_equal.grid(row=6, column=2, sticky='e')
+button_decimal.grid(row=6, column=1)
 
 
 
