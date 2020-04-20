@@ -73,16 +73,16 @@ def rooot():
 
 def equals():
 	if operationmem == '+':
-		display['text'] = str(int(memory[0])+int(display['text']))
+		display['text'] = str(int(float(memory[0])+float(display['text'])))
 
 	elif operationmem == '-':
-		display['text'] = str(int(memory[0])-int(display['text']))
+		display['text'] = str(float(memory[0])-float(display['text']))
 
 	elif operationmem == '*':
-		display['text'] = str(int(memory[0])*int(display['text']))
+		display['text'] = str(float(memory[0])*float(display['text']))
 
 	elif operationmem == '/':
-		x = int(memory[0])/int(display['text'])
+		x = float(memory[0])/float(display['text'])
 		if x == int(x):
 			display['text'] = str(int(x))
 
