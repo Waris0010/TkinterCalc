@@ -63,7 +63,6 @@ def rooot():
 	global operationmem
 	operationmem = '√'
 	memory[0] = (display['text'])
-	# display['text'] = str(sqrt(int(memory[0])))
 	x = sqrt(float(memory[0]))
 	if x == int(x):
 		display['text'] = str(int(x))
@@ -76,13 +75,28 @@ def point():
 
 def equals():
 	if operationmem == '+':
-		display['text'] = str(int(float(memory[0])+float(display['text'])))
+		x = float(memory[0])+float(display['text'])
+		if x == int(x):
+			display['text'] = str(int(x))
+
+		else:
+			display['text'] = str(x)
 
 	elif operationmem == '-':
-		display['text'] = str(float(memory[0])-float(display['text']))
+		x = float(memory[0])-float(display['text'])
+		if x == int(x):
+			display['text'] = str(int(x))
+
+		else:
+			display['text'] = str(x)
 
 	elif operationmem == '*':
-		display['text'] = str(float(memory[0])*float(display['text']))
+		x = float(memory[0])*float(display['text'])
+		if x == int(x):
+			display['text'] = str(int(x))
+
+		else:
+			display['text'] = str(x)
 
 	elif operationmem == '/':
 		x = float(memory[0])/float(display['text'])
