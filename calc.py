@@ -40,6 +40,13 @@ def clear():
 	display['text'] = ''
 	memory[0] = 0
 
+def delete():
+	if len(display['text']) != 0:
+		x = list(display['text'])
+		x.remove(x[-1])
+		display['text'] = ''.join(x)
+		
+
 def add():
 	global operationmem
 	operationmem = '+'
@@ -120,7 +127,7 @@ button_sqrt = Button(root, text='√', width=button_width, height=button_height,
 button_equal = Button(root, text='=', width = button_width, height=button_height, pady=5, command=equals)
 clr = Button(root, text='CLR',height=button_height, width=button_width, pady=5, command=clear).grid(row=6, column=0)
 button_decimal = Button(root, text='.', width=button_width, height=button_height, pady=5, command=point)
-delete_button = Button(root, image=delete_icon, width=92*3, height=70, pady=5)
+delete_button = Button(root, image=delete_icon, width=92*3, height=70, pady=5, command=delete)
 
 
 #Packing the Buttons
