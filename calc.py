@@ -1,11 +1,16 @@
 from tkinter import *
 from math import sqrt
+# from tkinter.ttk import *
 
 root = Tk()
 root.title('Calculator of Opovrongsho') #Don't mind the queer choice of name
 
+#Key Icons Below
+delete_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/deleteKeyIcon.gif")
+
+#Calculation Memory
 memory = [0]
-operationmem = '+'
+operationmem = ''
 
 
 display = Label(root, bg='#B7DCFB', text='', width=30, height=3, font='50')
@@ -114,7 +119,8 @@ button_divide = Button(root, text='/', width=button_width, height=button_height,
 button_sqrt = Button(root, text='√', width=button_width, height=button_height, pady=5, command=rooot)
 button_equal = Button(root, text='=', width = button_width, height=button_height, pady=5, command=equals)
 clr = Button(root, text='CLR',height=button_height, width=button_width, pady=5, command=clear).grid(row=6, column=0)
-button_decimal = Button(root, text='.', width=button_width, height=button_height, pady=5, command=point) # ADD COMMAND ARG
+button_decimal = Button(root, text='.', width=button_width, height=button_height, pady=5, command=point)
+delete_button = Button(root, image=delete_icon, width=92*3, height=70, pady=5)
 
 
 #Packing the Buttons
@@ -139,8 +145,7 @@ button_divide.grid(row=5, column=0, sticky='w')
 button_sqrt.grid(row=5, column=1)
 button_equal.grid(row=6, column=2, sticky='e')
 button_decimal.grid(row=6, column=1)
-
-
+delete_button.grid(row=7, column=0, columnspan=3)
 
 
 
