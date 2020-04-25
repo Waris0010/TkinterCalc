@@ -13,8 +13,8 @@ memory = [0]
 operationmem = ''
 
 
-display = Label(root, bg='#B7DCFB', text='', width=30, height=3, font='50')
-display.grid(row=0, column=0, columnspan=3)
+display = Label(root, bg='#B7DCFB', text='', width=31, height=3, font=('', 13))
+display.grid(row=0, column=0, columnspan=3, sticky='n s')
 
 
 #Numerical Buttons Defined
@@ -124,35 +124,35 @@ button_substract = Button(root, text='_', width=button_width, height=button_heig
 button_multiply = Button(root, text='*', width=button_width, height=button_height, pady=5, command=multiply)
 button_divide = Button(root, text='/', width=button_width, height=button_height, pady=5, command=divide)
 button_sqrt = Button(root, text='√', width=button_width, height=button_height, pady=5, command=rooot)
-button_equal = Button(root, text='=', width = button_width, height=button_height, pady=5, command=equals)
-clr = Button(root, text='CLR',height=button_height, width=button_width, pady=5, command=clear).grid(row=6, column=0)
+button_equal = Button(root, text='=', padx=133.5, height=button_height, pady=5, command=equals)
+clr = Button(root, text='CLR',height=button_height, width=button_width, pady=5, command=clear).grid(row=6, column=0, sticky='w')
 button_decimal = Button(root, text='.', width=button_width, height=button_height, pady=5, command=point)
-delete_button = Button(root, image=delete_icon, width=92*3, height=70, pady=5, command=delete)
+delete_button = Button(root, image=delete_icon, width=88, height=58, command=delete)
 
 
 #Packing the Buttons
 button7.grid(row=1, column=0, sticky='w')
-button8.grid(row=1, column=1)
+button8.grid(row=1, column=1, sticky='n s')
 button9.grid(row=1, column=2, sticky='e')
 
 button4.grid(row=2, column=0, sticky='w')
-button5.grid(row=2, column=1)
+button5.grid(row=2, column=1, sticky='n s')
 button6.grid(row=2, column=2, sticky='e')
 
 button1.grid(row=3, column=0, sticky='w')
-button2.grid(row=3, column=1)
+button2.grid(row=3, column=1, sticky='n s')
 button3.grid(row=3, column=2, sticky='e')
 
-button0.grid(row=4, column=1)
+button0.grid(row=4, column=1, sticky='n s')
 
 buttton_add.grid(row=4, column=2, sticky='e')
 button_substract.grid(row=5, column=2, sticky='e')
 button_multiply.grid(row=4, column=0, sticky='w')
 button_divide.grid(row=5, column=0, sticky='w')
-button_sqrt.grid(row=5, column=1)
-button_equal.grid(row=6, column=2, sticky='e')
-button_decimal.grid(row=6, column=1)
-delete_button.grid(row=7, column=0, columnspan=3)
+button_sqrt.grid(row=5, column=1, sticky='n s')
+button_equal.grid(row=7, column=0, columnspan=3, sticky='n s')
+button_decimal.grid(row=6, column=1, sticky='n s')
+delete_button.grid(row=6, column=2, sticky='e')
 
 
 
