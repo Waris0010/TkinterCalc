@@ -3,11 +3,14 @@ from math import sqrt
 # from tkinter.ttk import *
 
 root = Tk()
+
+#Icons Below
+delete_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/deleteKeyIcon.gif")
+main_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/main_icon.png")
+
 root.title('Calculator of Opovrongsho') #Don't mind the queer choice of name
 root.geometry('350x600')
-
-#Key Icons Below
-delete_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/deleteKeyIcon.gif")
+root.iconphoto(False, main_icon)
 
 #Calculation Memory
 memory = [0]
