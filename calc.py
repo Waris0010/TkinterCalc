@@ -5,8 +5,8 @@ from math import sqrt
 root = Tk()
 
 #Icons Below
-delete_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/deleteKeyIcon.gif")
-main_icon = PhotoImage(file="C:/Users/Administrator/Desktop/Program Files/Calculator Project/TkinterCalc/main_icon.png")
+delete_icon = PhotoImage(file="deleteKeyIcon.gif")
+main_icon = PhotoImage(file="main_icon.png")
 
 root.title('Calculator of Opovrongsho') #Don't mind the queer choice of name
 root.geometry('350x600')
